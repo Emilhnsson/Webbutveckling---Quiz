@@ -8,7 +8,7 @@ button.addEventListener('click', function() {
         var value = new Array();
         value = questText[i].getAttribute('value');
 
-        value = value.split("");
+        value = value.split(" ");
 
         if(value[1] == "+") {
             if((parseInt(value[0], 10) + parseInt(value[2], 10)) == (parseInt(questions[i].value, 10))) {
