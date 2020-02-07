@@ -14,19 +14,16 @@
     <div class="wrapper">
         <form id="quiz" class="quiz">
             <div class="qText q1" value="1 + 1" class="förnamn">
-                <p>1 + 1: </p><input type="number" class="input">
+                <p>1 + 1: </p><input type="number" class="input" onchange="funktion()">
             </div>
             <div class="qText q2" value="2 + 3" class="efternamn">
-                <p>2 + 3: </p><input type="number" class="input">
+                <p>2 + 3: </p><input type="number" class="input" onchange="funktion()">
             </div>
             <div class="qText" value="3 + 3" class="address">
-                <p>3 + 3: </p><input type="number" class="input">
+                <p>3 + 3: </p><input type="number" class="input" onchange="funktion()">
             </div>
             <div class="qText" value="5 * 3" class="postnummer">
-                <p>5 * 3: </p><input type="number" class="input">
-            </div>
-            <div class="qText" value="90 + 9" class="telfonnummer">
-                <p>90 + 9: </p><input type="number" class="input">
+                <p>5 * 3: </p><input type="number" class="input" onchange="funktion()">
             </div>
             <div class="qText" value="1024 + 24" class="telfonnummer">
                 <p>1024 + 24: </p><input type="number" class="input">
@@ -48,9 +45,12 @@
             </div>
             <button type="button" form="quiz" class="button">Submit</button>
         </form>
+        <div class="hej" "></div>
+    </div>
+    <div class="svar">
+        <h1 id="close">X</h1>
         <h1>Du fick <span class="score">- rätt!</span></h1>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

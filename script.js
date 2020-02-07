@@ -7,7 +7,6 @@ button.addEventListener('click', function() {
     for(var i = 0; i < questions.length; i++) {
         var value = new Array();
         value = questText[i].getAttribute('value');
-
         value = value.split(" ");
 
         if(value[1] == "-") {
@@ -55,6 +54,26 @@ button.addEventListener('click', function() {
             }
         }
     }
+
     scoreText = document.querySelector(".score");
     scoreText.innerHTML = score + " / " + questions.length + " rätt!" + " ";
+    svar = document.querySelector(".svar");
+
+    if(score < 4) {
+        svar.style.backgroundColor = "rgba(220,20,60, 0.800)";
+    } else if(score >= 4 && score <= 6) {
+        svar.style.backgroundColor = "rgba(207, 207, 72, 0.800)";
+    } else {
+        svar.style.backgroundColor = "rgba(152, 219, 152, 0.800)";
+    }
+
+    svar.style.display = "flex";
+    svar.style.animation = "fade .5s ease-in-out";
+    svar.style.opacity = "1";
+});
+
+var close = document.querySelector("#close");
+
+close.addEventListener('click', function() {
+    svar.style.display = "none";
 });
